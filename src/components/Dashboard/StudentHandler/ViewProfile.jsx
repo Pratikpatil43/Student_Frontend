@@ -18,7 +18,7 @@ const ViewProfile = () => {
       }
 
       try {
-        const response = await axios.get('/api/student/viewprofile', {
+        const response = await axios.get('https://attendancetracker-backend1.onrender.com/api/student/viewprofile', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },

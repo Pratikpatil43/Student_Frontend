@@ -13,7 +13,7 @@ export default function ForgotPasswordForm() {
         setLoading(true); // Show loader
 
         try {
-            const response = await fetch('/api/student/forgetpassword', {
+            const response = await fetch('https://attendancetracker-backend1.onrender.com/api/student/forgetpassword', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

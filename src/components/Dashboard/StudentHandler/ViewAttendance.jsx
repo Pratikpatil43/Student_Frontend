@@ -29,7 +29,7 @@ const ViewAttendance = () => {
       }
 
       try {
-        const response = await axios.get('/api/student/viewprofile', {
+        const response = await axios.get('https://attendancetracker-backend1.onrender.com/api/student/viewprofile', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -54,7 +54,7 @@ const ViewAttendance = () => {
         return;
       }
 
-      const response = await axios.get('/api/student/getAttendance', {
+      const response = await axios.get('https://attendancetracker-backend1.onrender.com/api/student/getAttendance', {
         params: { startDate, endDate },
         headers: {
           Authorization: `Bearer ${token}`,

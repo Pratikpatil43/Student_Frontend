@@ -17,7 +17,7 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await fetch('/api/student/login', {
+      const response = await fetch('https://attendancetracker-backend1.onrender.com/api/student/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

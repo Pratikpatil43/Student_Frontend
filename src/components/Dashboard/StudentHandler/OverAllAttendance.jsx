@@ -21,7 +21,7 @@ const OverAllAttendance = () => {
         }
 
         // Include the token in the headers of the request
-        const response = await axios.get('/api/student/getAttendance', {
+        const response = await axios.get('https://attendancetracker-backend1.onrender.com/api/student/getAttendance', {
           headers: {
             Authorization: `Bearer ${token}`, // Set the token in the Authorization header
           },

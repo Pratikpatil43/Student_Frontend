@@ -19,7 +19,7 @@ const Register = () => {
     setError('');
 
     try {
-      const response = await fetch('/api/student/register', {
+      const response = await fetch('https://attendancetracker-backend1.onrender.com/api/student/register', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
