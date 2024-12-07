@@ -18,7 +18,7 @@ const ViewProfile = () => {
       }
 
       try {
-        const response = await axios.get('http://localhost:5000/api/student/viewprofile', {
+        const response = await axios.get('/api/student/viewprofile', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },

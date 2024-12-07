@@ -17,7 +17,7 @@ const Login = () => {
     setError('');
 
     try {
-      const response = await fetch('http://localhost:5000/api/student/login', {
+      const response = await fetch('/api/student/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -13,7 +13,7 @@ export default function ForgotPasswordForm() {
         setLoading(true); // Show loader
 
         try {
-            const response = await fetch('http://localhost:5000/api/student/forgetpassword', {
+            const response = await fetch('/api/student/forgetpassword', {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
