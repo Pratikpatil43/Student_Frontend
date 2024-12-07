@@ -18,7 +18,7 @@ const ViewAttendance = () => {
   const [error, setError] = useState('');
   const [isStartDateOpen, setIsStartDateOpen] = useState(false);
   const [isEndDateOpen, setIsEndDateOpen] = useState(false);
-  const [email, setEmail] = useState(''); // State for user name
+  const [name, setName] = useState(''); // State for user name
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -34,7 +34,7 @@ const ViewAttendance = () => {
             Authorization: `Bearer ${token}`,
           },
         });
-        setEmail(response.data.user.email); // Assuming the response contains the user's name
+        setName(response.data.user.name); // Assuming the response contains the user's name
       } catch (err) {
         setError('Failed to fetch user data');
       }
@@ -95,7 +95,7 @@ const ViewAttendance = () => {
     <div className="container my-5">
       {/* Greeting with animated hand */}
       <p style={{ color: 'blue', fontSize: '20px' }}>
-  Hello, {email} {' Track your Attendance'}
+  Hello, {name} {' Track your Attendance'}
 </p>
 
 
@@ -184,7 +184,7 @@ const ViewAttendance = () => {
           <div>
             <h5>Total Classes: {totalClasses}</h5>
             <h5>Attended Classes: {attendedClasses}</h5>
-            <h5>Overall Attendance Percentage: {overallAttendancePercentage}%</h5>
+            {/* <h5>Overall Attendance Percentage: {overallAttendancePercentage}%</h5> */}
           </div>
         </div>
       ) : (

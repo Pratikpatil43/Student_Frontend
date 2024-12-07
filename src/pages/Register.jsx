@@ -30,7 +30,7 @@ const Register = () => {
       setLoading(false);
 
       if (response.ok) {
-        navigate('/login');
+        navigate('/');
       } else {
         setError(data.message);
         setShowToast(true);
